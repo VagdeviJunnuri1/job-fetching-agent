@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360b8cba-aa25-4f23-8aff-e2679788ce5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/daily_job_report.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/save_jobs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/save_jobs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/email/send_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fetch_jobs/indeed_scraper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fetch_jobs/jsearch_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reports/generate_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/daily_job_report.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/daily_job_report.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/python-app.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749078134757</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit">
+      <created>1749079035251</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749079035251</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
