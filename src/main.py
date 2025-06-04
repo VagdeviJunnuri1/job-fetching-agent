@@ -4,7 +4,7 @@ from fetch_jobs.jsearch_api import fetch_jobs_jsearch
 from fetch_jobs.indeed_scraper import fetch_jobs_indeed
 from data.save_jobs import save_jobs_to_csv
 from reports.generate_report import generate_pdf_report
-from email.send_email import send_email_with_attachment
+from mailer.send_email import send_email_with_attachment
 import os
 
 def main():
