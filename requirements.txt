@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+fpdf
+schedule
+python-dotenv
+pandas
