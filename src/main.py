@@ -1,33 +1,54 @@
-# Update src/main.py to include report generation and email
-
 from fetch_jobs.jsearch_api import fetch_jobs_jsearch
-from fetch_jobs.indeed_scraper import fetch_jobs_indeed
 from data.save_jobs import save_jobs_to_csv
 from reports.generate_report import generate_pdf_report
 from mailer.send_email import send_email_with_attachment
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def main():
-    # Fetch jobs via API
-    jobs_api = fetch_jobs_jsearch()
-    save_jobs_to_csv(jobs_api, filename="src/data/jobs_api.csv")
+    print("🚀 Starting job-fetching agent...")
 
-    # Fetch jobs by scraping
-    jobs_scrape = fetch_jobs_indeed()
-    save_jobs_to_csv(jobs_scrape, filename="src/data/jobs_scrape.csv")
+    # Step 1: Fetch jobs
+    jobs = fetch_jobs_jsearch()
+    job_count = len(jobs)
+    print(f"✅ Fetched {job_count} jobs.")
 
-    # Combine jobs for report (example: jobs_api)
-    report_file = generate_pdf_report(jobs_api)
+    # Step 2: Save to CSV if any jobs exist
+    if job_count:
+        csv_path = "src/data/jobs.csv"
+        save_jobs_to_csv(jobs, filename=csv_path)
+        print(f"📄 Jobs saved to {csv_path}")
+    else:
+        print("⚠️ No jobs found. Skipping CSV.")
 
-    # Email the report
+    # Step 3: Always generate PDF report
+    report_path = "src/reports/job_report.pdf"
+    generate_pdf_report(jobs, filename=report_path)
+    print(f"📝 PDF report generated at {report_path}")
+
+    # Step 4: Always email the report
     recipient = os.getenv("EMAIL_ADDRESS")
+    subject = (
+        f"📬 {job_count} New AI Software Jobs Today"
+        if job_count
+        else "❌ No New AI Software Jobs Today"
+    )
+    body = (
+        "Hi,\n\n"
+        "Please find today's job report attached.\n\n"
+        "Note: No new jobs were found today." if not job_count else
+        "Hi,\n\nPlease find today's job report attached.\n\nRegards,\nJob Agent"
+    )
+
     send_email_with_attachment(
         to_email=recipient,
-        subject="Daily AI Software Engineer Job Report",
-        body="Attached is the daily job report for AI Software Engineer roles.",
-        attachment_path=report_file
+        subject=subject,
+        body=body,
+        attachment_path=report_path
     )
-    print("Report generated and emailed successfully.")
+    print(f"📧 Report emailed to {recipient}")
 
 if __name__ == "__main__":
     main()
