@@ -1,4 +1,4 @@
-from fetch_jobs.jsearch_api import fetch_jobs_jsearch
+from fetch_jobs.jsearch_api import fetch_multiple_roles
 from data.save_jobs import save_jobs_to_csv
 from reports.generate_report import generate_pdf_report
 from mailer.send_email import send_email_with_attachment
@@ -10,8 +10,12 @@ load_dotenv()
 def main():
     print("🚀 Starting job-fetching agent...")
 
-    # Step 1: Fetch jobs
-    jobs = fetch_jobs_jsearch()
+    roles = ["AI Engineer", "ML Engineer", "Software Engineer"]
+    jobs = fetch_multiple_roles(roles, pages=3)
+
+    # Sort by most recent first
+    jobs.sort(key=lambda j: j.get("job_posted_at_timestamp", 0), reverse=True)
+
     job_count = len(jobs)
     print(f"✅ Fetched {job_count} jobs.")
 

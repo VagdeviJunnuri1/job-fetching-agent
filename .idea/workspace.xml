@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="360b8cba-aa25-4f23-8aff-e2679788ce5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/debug/test_fetch_jobs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="360b8cba-aa25-4f23-8aff-e2679788ce5f" name="Changes" comment="fix issue - 'no jobs in pdf report'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fetch_jobs/api_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetch_jobs/api_fetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fetch_jobs/jsearch_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetch_jobs/jsearch_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reports/generate_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/generate_report.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -152,7 +152,28 @@
       <option name="project" value="LOCAL" />
       <updated>1749081765068</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix issue">
+      <created>1749085293757</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749085293757</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix issue - 'no jobs in pdf report'">
+      <created>1749086448148</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1749086448148</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix issue - 'no jobs in pdf report'">
+      <created>1749086681065</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1749086681065</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,6 +201,8 @@
     <MESSAGE value="fix 'ValueError'" />
     <MESSAGE value="fix 'No jobs to save&amp;SMTPAuthenticationError'" />
     <MESSAGE value="update password" />
-    <option name="LAST_COMMIT_MESSAGE" value="update password" />
+    <MESSAGE value="fix issue" />
+    <MESSAGE value="fix issue - 'no jobs in pdf report'" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix issue - 'no jobs in pdf report'" />
   </component>
 </project>

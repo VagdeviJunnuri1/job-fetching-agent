@@ -18,6 +18,7 @@ def generate_pdf_report(jobs, filename="src/reports/job_report.pdf"):
             company = job.get("employer_name", "N/A")
             location = job.get("job_location", "N/A")
             link = job.get("job_apply_link", "No Link")
+            source = job.get("job_publisher", "Unknown")
 
             pdf.set_font("Arial", "B", 12)
             pdf.multi_cell(0, 10, title)
@@ -27,6 +28,7 @@ def generate_pdf_report(jobs, filename="src/reports/job_report.pdf"):
             pdf.set_text_color(0, 0, 255)
             pdf.cell(0, 8, link, ln=True, link=link)
             pdf.set_text_color(0, 0, 0)
+            pdf.cell(0, 8, f"Source: {source}", ln=True)
             pdf.ln(6)
 
     pdf.output(filename)
