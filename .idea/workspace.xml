@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360b8cba-aa25-4f23-8aff-e2679788ce5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fetch_jobs/api_fetcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -89,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749080474360</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix 'No jobs to save&amp;SMTPAuthenticationError'">
+      <created>1749081025484</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749081025484</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +120,7 @@
     <MESSAGE value="Enable manual trigger" />
     <MESSAGE value="fix 'ModuleNotFoundError'" />
     <MESSAGE value="fix 'ValueError'" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 'ValueError'" />
+    <MESSAGE value="fix 'No jobs to save&amp;SMTPAuthenticationError'" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 'No jobs to save&amp;SMTPAuthenticationError'" />
   </component>
 </project>
