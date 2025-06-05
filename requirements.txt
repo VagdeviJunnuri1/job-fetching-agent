@@ -4,3 +4,4 @@ fpdf
 schedule
 python-dotenv
 pandas
+reportlab
